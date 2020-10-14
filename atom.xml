@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cloudinbottle.github.io/</id>
     <title>Gridea</title>
-    <updated>2020-10-14T14:32:15.711Z</updated>
+    <updated>2020-10-14T14:51:21.146Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cloudinbottle.github.io/"/>
     <link rel="self" href="https://cloudinbottle.github.io/atom.xml"/>
@@ -11,17 +11,12 @@
     <icon>https://cloudinbottle.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
     <entry>
-        <title type="html"><![CDATA[JAVA多线程]]></title>
-        <id>https://cloudinbottle.github.io/post/java-duo-xian-cheng/</id>
-        <link href="https://cloudinbottle.github.io/post/java-duo-xian-cheng/">
+        <title type="html"><![CDATA[创建多线程]]></title>
+        <id>https://cloudinbottle.github.io/post/chuang-jian-duo-xian-cheng/</id>
+        <link href="https://cloudinbottle.github.io/post/chuang-jian-duo-xian-cheng/">
         </link>
-        <updated>2020-10-14T13:44:41.000Z</updated>
-        <content type="html"><![CDATA[<p>#线程类<br>
-java提供了线程类java.lang.Thread来创建多线程的程序，每个Thread类的对象就是一个单独的线程。<br>
-线程类中需要<strong>定义run方法</strong>，在方法run()中的代码称为线程体，即CPU调度执行这个线程对象时要执行的代码。<br>
-调用线程对象的<strong>start方法</strong>，表示启动该线程，实际上就是开始执行线程体，即run方法。<br>
-但某个线程的run方法执行完时，表示该线程的线程体执行结束，线程就结束了。</p>
-<p><font size=5 color=red><center>线程的创建和使用</center></font></p>
+        <updated>2020-10-14T14:44:09.000Z</updated>
+        <content type="html"><![CDATA[<p><font size=5 color=red><center>线程的创建和使用</center></font></p>
 <p><font size=3 color=brack>第一种方式：通过继承Thread类</font></p>
 <p>定义一个类，继承java.lang.Thread类，并重写父类定义的public void run()方法。<br>
 Class MyThread extends Thread {<br>
@@ -42,8 +37,43 @@ Thread myThread = new Thread(new MyRun());<br>
 myThread.start();<br>
 <font size=1 color=blue>这里的：Thread myThread = new Thread(new MyRun());是定义了匿名对象<br/>相当于:MyRun myRun=new MyRun();<br>
 Thread myThread = new Thread(myRun);<br>
-</font><br>
-<a href="/post/about">123</a></p>
+</font></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[认识多线程]]></title>
+        <id>https://cloudinbottle.github.io/post/ren-shi-duo-xian-cheng/</id>
+        <link href="https://cloudinbottle.github.io/post/ren-shi-duo-xian-cheng/">
+        </link>
+        <updated>2020-10-14T14:35:57.000Z</updated>
+        <content type="html"><![CDATA[<p>#线程类<br>
+java提供了线程类java.lang.Thread来创建多线程的程序，每个Thread类的对象就是一个单独的线程。<br>
+线程类中需要<strong>定义run方法</strong>，在方法run()中的代码称为线程体，即CPU调度执行这个线程对象时要执行的代码。<br>
+调用线程对象的<strong>start方法</strong>，表示启动该线程，实际上就是开始执行线程体，即run方法。<br>
+但某个线程的run方法执行完时，表示该线程的线程体执行结束，线程就结束了。</p>
+<p>#线程类型<br>
+用户线程<br>
+默认情况下， 创建的线程皆为用户线程。<br>
+主线程结束后用户线程还会继续运行<br>
+守护线程<br>
+守护进程（Daemon）是运行在后台的一种特殊进程。可以在线程启动之前，通过方法Thread.setDaemon(true) ，将线程设置为守护线程。<br>
+如果没有用户线程，都是守护线程，程序就会结束。<br>
+<img src="https://cloudinbottle.github.io//post-images/1602687077322.jpg" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[JAVA多线程目录]]></title>
+        <id>https://cloudinbottle.github.io/post/java-catalog/</id>
+        <link href="https://cloudinbottle.github.io/post/java-catalog/">
+        </link>
+        <updated>2020-10-14T13:44:41.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+    <li><a href="/post/ren-shi-duo-xian-cheng"><font size=3>1.认识多线程</          font></a></li>
+    <li><a href="/post/chuang-jian-duo-xian-cheng"><font size=3>2.创建多线程</         font></a></li>
+    <li><a href="/post/ren-shi-duo-xian-cheng"><font size=3>3.创建多线程</         font></a></li>
+    <li><a href="/post/ren-shi-duo-xian-cheng"><font size=3>4.创建多线程</         font></a></li>
+    <li><a href="/post/ren-shi-duo-xian-cheng"><font size=3>5.创建多线程</         font></a></li>
+</ul>
 ]]></content>
     </entry>
 </feed>

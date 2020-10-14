@@ -2,23 +2,20 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | Gridea</title>
+<title>创建多线程 | Gridea</title>
 <link rel="shortcut icon" href="https://cloudinbottle.github.io//favicon.ico?v=1602687079611">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cloudinbottle.github.io//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="关于 | Gridea - Atom Feed" href="https://cloudinbottle.github.io//atom.xml">
+<link rel="alternate" type="application/atom+xml" title="创建多线程 | Gridea - Atom Feed" href="https://cloudinbottle.github.io//atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="
-欢迎来到我的小站呀，很高兴遇见你！🤝
-
-🏠 关于本站
-👨‍💻 博主是谁：我是鳌拜的弟弟熬夜
-⛹ 兴趣爱好：掉头发
-📬 联系我呀：muo12345@163.com
-..." />
+    <meta name="description" content="线程的创建和使用
+第一种方式：通过继承Thread类
+定义一个类，继承java.lang.Thread类，并重写父类定义的public void run()方法。
+Class MyThread extends Thread {
+public..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -81,11 +78,11 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              关于
+              创建多线程
             </h2>
             <div class="post-info">
               <span>
-                2019-01-25
+                2020-10-14
               </span>
               <span>
                 1 min read
@@ -95,32 +92,46 @@
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<h2 id="博主是谁我是鳌拜的弟弟熬夜">👨‍💻 博主是谁：我是鳌拜的弟弟熬夜</h2>
-<h2 id="兴趣爱好掉头发">⛹ 兴趣爱好：掉头发</h2>
-<h2 id="联系我呀muo12345163com">📬 联系我呀：muo12345@163.com</h2>
+                <p><font size=5 color=red><center>线程的创建和使用</center></font></p>
+<p><font size=3 color=brack>第一种方式：通过继承Thread类</font></p>
+<p>定义一个类，继承java.lang.Thread类，并重写父类定义的public void run()方法。<br>
+Class MyThread extends Thread {<br>
+public void run() {…}<br>
+}<br>
+创建该类的一个对象，这个对象就是线程对象。<br>
+MyThread myThread = new MyThread();<br>
+调用线程对象的start方法，启动线程。<br>
+myThread.start();<br>
+<font size=3 color=brack>第二种：通过实现Runnable接口</font></p>
+<p>定义一个类，实现java.lang.Runnable接口，并实现接口声明的public void run()方法<br>
+Class MyRun implements Runnable {<br>
+public void run() {…}<br>
+}<br>
+创建该类的一个对象，将其作为Thread类构造方法的参数，以产生一个线程对象:<br>
+Thread myThread = new Thread(new MyRun());<br>
+调用线程对象的start方法，启动线程。<br>
+myThread.start();<br>
+<font size=1 color=blue>这里的：Thread myThread = new Thread(new MyRun());是定义了匿名对象<br/>相当于:MyRun myRun=new MyRun();<br>
+Thread myThread = new Thread(myRun);<br>
+</font></p>
 
               </div>
               <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">🏠 关于本站</a></li>
-<li><a href="#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81%E6%88%91%E6%98%AF%E9%B3%8C%E6%8B%9C%E7%9A%84%E5%BC%9F%E5%BC%9F%E7%86%AC%E5%A4%9C">👨‍💻 博主是谁：我是鳌拜的弟弟熬夜</a></li>
-<li><a href="#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD%E6%8E%89%E5%A4%B4%E5%8F%91">⛹ 兴趣爱好：掉头发</a></li>
-<li><a href="#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80muo12345163com">📬 联系我呀：muo12345@163.com</a></li>
-</ul>
-</li>
-</ul>
-
+                
               </div>
             </div>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://cloudinbottle.github.io/post/ren-shi-duo-xian-cheng/">
+              <h3 class="post-title">
+                认识多线程
+              </h3>
+            </a>
+          </div>
         
 
         
