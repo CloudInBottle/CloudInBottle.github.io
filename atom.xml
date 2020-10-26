@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cloudinbottle.github.io/</id>
     <title>Gridea</title>
-    <updated>2020-10-26T08:03:42.673Z</updated>
+    <updated>2020-10-26T09:18:12.206Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cloudinbottle.github.io/"/>
     <link rel="self" href="https://cloudinbottle.github.io/atom.xml"/>
@@ -17,7 +17,29 @@
         </link>
         <updated>2020-10-26T07:52:32.000Z</updated>
         <content type="html"><![CDATA[<p>单精度浮点数采用IEEE754标准-&gt;|符号S|阶码M|尾数N|<br>
-符号:1为负数，0为正数。节码:用移码表示，加上偏移量（01111111）。尾数:范围[1-2），省略高位1</p>
+符号:1为负数,0为正数。节码:用移码表示,加上偏移量（01111111）。尾数:范围[1~2),省略高位1<br>
+浮点数的表示范围：</p>
+<p><img src="https://cloudinbottle.github.io//post-images/1603699490158.png" alt="" loading="lazy"><br>
+上溢机器停止运算，进行中断溢出处理。下溢通常将尾数取零，按0处理。<br>
+##单精度浮点数转十进制实数<br>
+先尾数*(2^(阶码-127))再转成10进制最后加上符号<br>
+##十进制实数转单精度浮点数<br>
+先将实数转2进制，再将二进制规范化(类似科学计数法让其符合[1~2))得出阶码和尾数，阶码再加上127得到偏移的阶码，最后加上符号。<br>
+符号+偏移的阶码+尾数<br>
+##为什么偏移量是127而不是128<br>
+因为浮点数有一些特殊的值需要使用全0和全1的偏移的阶码<br>
+剩下的偏移的阶码范围(1-254)<br>
+1.使用128为偏移量浮点数绝对值大概范围：<br>
+5.9<em>10<sup>(-39)~1.7*10</sup>(+38)<br>
+1.使用128为偏移量浮点数绝对值大概范围：<br>
+1.2</em>10<sup>(-38)~3.4*10</sup>(+38)<br>
+取127更加对称。<br>
+##特殊值<br>
+1.偏移阶码为0，尾数为0：+0和-0<br>
+2.偏移阶码为1，尾数为0：+∞和-∞<br>
+3.偏移阶码为0，尾数非0：非规范化数(处理0和更小的数值)<br>
+4.偏移阶码为1，尾数非0：NAN<br>
+5.偏移阶码为1<sub>2^M-1，尾数[1</sub>2)：规范数</p>
 ]]></content>
     </entry>
     <entry>
