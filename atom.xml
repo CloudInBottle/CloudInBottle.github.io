@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://cloudinbottle.github.io/</id>
     <title>Gridea</title>
-    <updated>2020-10-14T14:51:21.146Z</updated>
+    <updated>2020-10-26T08:03:42.673Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://cloudinbottle.github.io/"/>
     <link rel="self" href="https://cloudinbottle.github.io/atom.xml"/>
@@ -10,6 +10,16 @@
     <logo>https://cloudinbottle.github.io/images/avatar.png</logo>
     <icon>https://cloudinbottle.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[单精度浮点数]]></title>
+        <id>https://cloudinbottle.github.io/post/dan-jing-du-fu-dian-shu/</id>
+        <link href="https://cloudinbottle.github.io/post/dan-jing-du-fu-dian-shu/">
+        </link>
+        <updated>2020-10-26T07:52:32.000Z</updated>
+        <content type="html"><![CDATA[<p>单精度浮点数采用IEEE754标准-&gt;|符号S|阶码M|尾数N|<br>
+符号:1为负数，0为正数。节码:用移码表示，加上偏移量（01111111）。尾数:范围[1-2），省略高位1</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[创建多线程]]></title>
         <id>https://cloudinbottle.github.io/post/chuang-jian-duo-xian-cheng/</id>
@@ -58,7 +68,7 @@ java提供了线程类java.lang.Thread来创建多线程的程序，每个Thread
 守护线程<br>
 守护进程（Daemon）是运行在后台的一种特殊进程。可以在线程启动之前，通过方法Thread.setDaemon(true) ，将线程设置为守护线程。<br>
 如果没有用户线程，都是守护线程，程序就会结束。<br>
-<img src="https://cloudinbottle.github.io//post-images/1602687077322.jpg" alt="" loading="lazy"></p>
+<img src="/images/xianchengzhuangtai.jpg" arl="线程状态"></p>
 ]]></content>
     </entry>
     <entry>
